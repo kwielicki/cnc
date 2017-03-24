@@ -1,0 +1,27 @@
+.btn {
+	font-size: $font-size-base;
+	border-radius: $border-radius;
+	box-shadow: 1px 5px 10px rgba(0,0,0, 0.2);
+	&-second {
+		background-color: $brand-second;
+		color: #fff;
+		&:active, &:focus, &:hover {
+			color: #fff;
+			background-color: darken($brand-second, 3%);
+		}
+	}
+	&-transparent {
+		box-shadow: none;
+		border: 1px solid $brand-primary;
+		&:active, &:focus, &:hover {
+			color: #fff;
+			background-color: $brand-primary;
+		}
+	}
+}
+
+.btn {
+	&-lg {
+		padding: 1.2rem 2.5rem 1.5rem 2.5rem;
+	}
+}

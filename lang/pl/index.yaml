@@ -1,0 +1,28 @@
+lang: pl ## dp z,oamau ma to z API
+heading: Witaj świecie!
+footer:  Utowrzone 2015
+
+# Tłumaczenie dotyczące nazw plików generowanych przez i18n
+fileName:
+    index: index
+    cnc: cnc-tloczenia
+    company: o-firmie
+    contact: kontakt
+
+# Tłumaczenie dotyczące Navbar oraz Topbar
+menu:
+    homepage: Strona główna
+    cnc: Tłoczenia cnc
+    company: O firmie
+    contact: Kontakt
+    magazyn: magazyn czasowego składowania
+    url:
+        prefix: /pl/
+        cnc: cnc-tloczenia
+        company: o-firmie
+        contact: kontakt
+
+# Tłumaczenia dotyczące anchora do zmiany wersji językowej
+langSwitch:
+    url: /en/
+    label: English version

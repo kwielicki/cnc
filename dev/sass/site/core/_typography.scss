@@ -1,0 +1,76 @@
+* {
+	&:focus {
+		outline: none !important;
+	}
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 1.4;
+}
+
+p + h5 {
+	margin-top: $spacer;
+}
+
+.heading--bordered {
+	position: relative;
+	border-bottom: 1px solid $gray-lighter;
+	padding-bottom: 5px;
+	margin-bottom: $spacer;
+	font-weight: 300;
+	.dialog-helper {
+        position: absolute;
+		right: 0;
+		top: 50%;
+		cursor: pointer;
+		font-size: $font-size-base;
+		transform: translateY(-50%);
+    }
+}
+
+a {
+	@include transition;
+	&.link {
+		@include transition;
+		display: inline-block;
+		position: relative;
+		&:after {
+			@include transition;
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -4px;
+			height: 1px;
+			width: 100%;
+			background-color: $gray-lighter;
+		}
+		&:hover {
+			color: $brand-primary;
+			&:after {
+				background-color: $brand-primary;
+			}
+		}
+		&--motive {
+			color: $brand-second;
+			&:hover {
+				color: #fff;
+				&:after {
+					background-color: $brand-second;
+				}
+			}
+		}
+	}
+	&:active, &:focus, &:hover {
+		text-decoration: none;
+	}
+}
+
+code {
+	background-color: $brand-second;
+	color: #fff;
+}

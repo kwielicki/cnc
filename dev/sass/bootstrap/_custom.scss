@@ -1,0 +1,65 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+$font-family-sans-serif	: 'Lato', sans-serif;
+$headings-font-family	: 'Oswald', sans-serif;
+$font-size-base			: 1.6rem;
+$font-size-h1			: 4.5rem;
+$font-size-h2			: 4.0rem;
+$font-size-h3			: 3.5rem;
+$font-size-h4			: 3.0rem;
+$font-size-h5			: 2.5rem;
+$font-size-h6			: 2.0rem;
+$font-size-lg           : 1.4rem;
+$font-weight-base       : 400;
+
+//- Paths
+$path_assets: '../../assets/';
+$path_images: $path_assets + 'images/';
+
+//- Colors
+$body-color         : #3a3a3a;
+$brand-primary		: #212a34;
+$brand-primary-light: #494f54;
+$blue-dark			: #405e74;
+$brand-second		: #ff6200;
+$gray		  		: #c3c3c3;
+$gray-lighter		: #ebebeb;
+$input-color-placeholder : $gray;
+
+//- Spacers
+$spacer-xs	: 1rem;
+$spacer-sm	: 2rem;
+$spacer		: 3rem;
+$spacer-md	: 4rem;
+$spacer-xl	: 7rem;
+
+//- Border radius
+$border-radius:	.4rem;
+
+//- Grid (Width without padding)
+$container-width-sm: 510px;
+$container-width-md: 690px;
+$container-width-lg: 930px;
+$container-width-xl: 1110px;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 1197px,
+  md: 1198px,
+  lg: 1199px,
+  xl: 1200px
+);
+
+$secion-max-width: 1700px;
+
+//- Forms
+$input-padding-x:     1.5rem !default;
+$input-padding-y:     1rem !default;
+$input-line-height:   1.4 !default;
+$input-border-focus:  $brand-primary;
+$input-border-color:  $gray;
+$textarea-height:     250px;

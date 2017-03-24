@@ -1,0 +1,36 @@
+//- Mixin for modal generator
+	:: Usage
+	+bs-modal(
+		'modalClassModifier',
+		'modalButtonClass',
+		'modalButtonText',
+		'modalButtonTarget',
+		'modalDialogTitle',
+		'modalButtonCloseClass',
+		'modalButtonCloseText'
+	)
+
+- var secondButton = false
+
+mixin bs-modal(modalClassModifier, modalButtonClass, modalButtonText, modalButtonTarget, modalDialogTitle, modalButtonCloseClass, modalButtonCloseText, modalSizeModifier)
+	div(class="component bs-modal " + modalClassModifier)
+		a(href="#",
+			class="bs-modal__button " + modalButtonClass,
+			data-toggle='modal', 
+			data-target='#' + modalButtonTarget)=modalButtonText
+		.modal.fade(id=modalButtonTarget,
+			tabindex='-1', 
+			role='dialog', 
+			aria-hidden='true')
+			.modal-dialog(role='document', class=modalSizeModifier)
+				.modal-content
+					.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') &times;
+						h4.modal-title=modalDialogTitle
+					.modal-body
+						block modal-body
+					.modal-footer
+						button(class="bs-modal__close " + modalButtonCloseClass, type='button', data-dismiss='modal')=modalButtonCloseText
+						if secondButton
+							button.btn.btn-primary(type='button') Save changes

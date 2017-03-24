@@ -1,0 +1,27 @@
+lang: en
+heading: Welcome!
+footer:  Copyright 2015
+
+fileName:
+    index: index
+    cnc: cnc-turning
+    company: about-company
+    contact: contact
+
+# Tłumaczenie dotyczące Menu
+menu:
+    homepage: Home page
+    cnc: Cnc turning
+    company: About company
+    contact: Contact
+    magazyn: Temporary storage warehouse
+    url:
+        prefix: /en/
+        cnc: cnc-turning
+        company: about-company
+        contact: contact
+
+# Tłumaczenia dotyczące anchora do zmiany wersji językowej
+langSwitch:
+    url: /pl/
+    label: Polish version

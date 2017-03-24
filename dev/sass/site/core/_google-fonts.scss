@@ -1,0 +1,35 @@
+$google-fonts-path: '../fonts/google-fonts/';
+
+@mixin font-face($fontName, $fontStyle, $fontWeigth, $srcLocal, $srcUrl, $format) {
+	font-family: $fontName;
+	font-style: $fontStyle;
+	font-weight: $fontWeigth;
+	src:
+		local($srcLocal),
+		url("#{$google-fonts-path}#{$srcUrl}") format($format);
+}
+
+//- Lato
+@font-face {
+    @include font-face('Lato', 'normal', 300, 'Lato-Light', 'Lato-Light.ttf', 'truetype');
+}
+@font-face {
+    @include font-face('Lato', 'normal', 400, 'Lato-Regular', 'Lato-Regular.ttf', 'truetype');
+}
+@font-face {
+    @include font-face('Lato', 'normal', 700, 'Lato-Bold', 'Lato-Bold.ttf', 'truetype');
+}
+@font-face {
+    @include font-face('Lato', 'normal', 900, 'Lato-Black', 'Lato-Black.ttf', 'truetype');
+}
+
+//- Oswald
+@font-face {
+    @include font-face('Oswald', 'normal', 300, 'Oswald-Light', 'Oswald-Light.ttf', 'truetype');
+}
+@font-face {
+    @include font-face('Oswald', 'normal', 400, 'Oswald-Regular', 'Oswald-Regular.ttf', 'truetype');
+}
+@font-face {
+    @include font-face('Oswald', 'normal', 700, 'Oswald-Bold', 'Oswald-Bold.ttf', 'truetype');
+}

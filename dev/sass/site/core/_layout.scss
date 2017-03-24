@@ -1,0 +1,33 @@
+body {
+	font-weight: $font-weight-base ;
+}
+.section {
+	padding-top: $spacer-xl;
+	padding-bottom: $spacer-xl;
+	max-width: 1700px;
+	margin: 0 auto;
+	&--ghost {
+		padding: 0;
+	}
+	&--pattern {
+		background-image: url(#{$path_images}section-background.png);
+		background-repeat: repeat;
+    	background-size: 15px 15px;
+		border-top: 2px solid $gray-lighter;
+	}
+	&--full {
+		max-width: 100%;
+	}
+	&--motive {
+		background-color: $brand-primary;
+	}
+	&--gray {
+		background-color: $gray-lighter;
+	}
+	&--bottom0 {
+		padding-bottom: 0;
+	}
+}
+img {
+	max-width: 100%;
+}

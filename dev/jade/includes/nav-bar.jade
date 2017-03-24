@@ -1,0 +1,18 @@
+nav.component.nav-bar
+	.nav-bar__inner
+		.container
+			.row
+				.col-xs-12
+					.nav-bar__source
+						.nav-bar__header
+							h5.nav-bar__title Bałtex FHU #[sup &#174;]
+							h6.nav-bar__subtitle
+								a(href="${{ index.menu.url.prefix }}$", title="${{ index.menu.homepage }}$", data-rewrite-mode-disabled).nav-bar__sneakpeak ${{ index.menu.homepage }}$
+								a(href="${{ index.menu.url.prefix }}$${{ index.menu.url.cnc }}$", title="${{ index.menu.cnc }}$").nav-bar__sneakpeak ${{ index.menu.cnc }}$
+								a(href="sprzedaz-suchej-tarcicy-dab-sosna", title="Sprzedaż tarcicy").nav-bar__sneakpeak Sprzedaż tarcicy
+								a(href="magazyn-czasowego-skladowania", title="${{ index.menu.magazyn }}$").nav-bar__sneakpeak ${{ index.menu.magazyn }}$
+							.nav-bar__hamburger.hidden-md-up
+								.nav-bar__hamburger-menu
+									span.nav-bar__hamburger-element
+									span.nav-bar__hamburger-element
+									span.nav-bar__hamburger-element

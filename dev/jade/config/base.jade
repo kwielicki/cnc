@@ -1,0 +1,51 @@
+include config
+include ../mixins/mixins
+
+doctype
+<!--[if IE 8 ]>
+html.no-js.ie8(lang="${{ index.lang }}$")
+<![endif]-->
+<!--[if IE 9 ]>
+html.no-js.ie9(lang="${{ index.lang }}$")
+<![endif]-->
+html()&attributes({
+    'class'       : ['no-js dom-html'],
+    'lang'        : "${{ index.lang }}$",
+    'data-project-name': project_name,
+    'data-resized': 250,
+    'data-mode-rewrite': 'on'
+})
+    head
+        meta(charset=charset)
+        meta(name='description' content=page_description)
+        meta(name='author' content=page_author)
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width initial-scale=1')
+        meta(name='format-detection' content='telephone=no')
+        
+        title= page_title
+        script(src="https://use.fontawesome.com/60998be330.js")
+        link(rel='shortcut icon' href=path_image + 'favicon.ico')
+        link(rel='apple-touch-icon' href=path_image + 'favicon.png')
+        link(rel='stylesheet' href=path_css + 'style.min.css')
+    body()&attributes({'class': body_classes})
+        //- Google Analitics
+        if google_analitics
+            include ../includes/google-analitics
+        //- Cookies policy
+        if cookies_policy
+            include ../includes/cookies-policy
+        //- Preloader
+        if preloader
+        #page-wrapper
+            main#content-wrapper.content-wrapper
+                //- Top bar
+                if top_bar
+                    include ../includes/top-bar
+                //- Nav bar
+                if nav_bar
+                    include ../includes/nav-bar
+                block page_content
+            //- footer
+            if footer
+        include ../js/scripts

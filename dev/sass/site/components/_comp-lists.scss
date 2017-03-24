@@ -1,0 +1,92 @@
+.list--arrowed {
+	padding-left: 0;
+	a {
+		display: inline-block;
+		padding: 0 0$spacer-xs/2 0;
+		&:hover {
+			i {
+				color: $brand-second;
+			}
+		}
+	}
+	i {
+		padding-right: $spacer-xs;
+		opacity: .8;
+	}
+	span {
+
+	}
+}
+
+.list--icon {
+	@include clearfix;
+	margin-bottom: 0;
+	li {
+		float: left;
+		font-size: $font-size-lg;
+		padding: $spacer-sm $spacer-xs;
+		color: $brand-primary-light;
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+	a {
+		font-size: inherit;
+		color: inherit;
+	}
+	a {
+		&:hover {
+			color: $brand-primary;
+			span {
+				&:after {
+					background-color: $gray;
+				}
+			}
+		}
+	}
+	span:not(.span) {
+		position: relative;
+		&:after {
+			@include transition;
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -2px;
+			height: 1px;
+			background-color: $gray-lighter;
+		}
+	}
+	i {
+		padding-right: $spacer-xs;
+	}
+}
+
+.list-header {
+	margin-top: $spacer;
+	&__item {
+		position: relative;
+		font-weight: 300;
+		&:not(&--header) {
+			padding-left: $spacer-sm;
+			margin-top: $spacer-xs;
+			margin-left: $spacer-xs;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 9px;
+			left: 0;
+			width: 6px;
+			height: 6px;
+			background-color: $body-color;
+		}
+		&--header {
+			@extend code;
+			display: inline;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

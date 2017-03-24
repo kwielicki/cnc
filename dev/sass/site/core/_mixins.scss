@@ -1,0 +1,17 @@
+/*
+ * 1 - Text decoration
+ * 2 - Transitions
+*/
+
+/* 1 */
+@mixin text-decoration() {
+	text-decoration: none;
+	&:active, &:focus, &:hover {
+		text-decoration: none;
+	}
+}
+
+/* 2 */
+@mixin transition() {
+	transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1) 0s;
+}

@@ -1,0 +1,28 @@
+.js-cookies-policy {
+	display: none;
+}
+.cookies-policy {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: $zindex-modal;
+	background-color: rgba(231,230,229,.5);
+	border-top: 1px solid #e2dddd;
+	padding: 25px 0;
+	&__inner {
+		padding-left: 150px;
+		text-align: justify;
+		background: url("#{$path_images}cookies-policy.png") no-repeat 5% 50%;
+		background-size: 80px;
+		@include media-breakpoint-down(md) {
+			padding-left: 0;
+			padding-top: 100px;
+			background-position: 0 0;
+		}
+	}
+	&__close {
+		cursor: pointer;
+
+	}
+}

@@ -1,0 +1,9 @@
+html:not(.mobile) {
+    [data-parallax] {
+        @extend [data-background];
+        background-attachment: fixed;
+        &.disabled {
+            background-attachment: scroll;
+        }
+    }
+}
