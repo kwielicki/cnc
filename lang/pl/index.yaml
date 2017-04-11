@@ -1,15 +1,23 @@
+# Spis treści
+# 1 - Globalne
+# 2 - Tłumaczenie dotyczące nazw plików generowanych przez i18n
+# 3 - Tłumaczenie dotyczące Navbar oraz Topbar
+# 4 - Tłumaczenia dotyczące anchora do zmiany wersji językowej
+# 5 - Tłumaczenie dotyczące Banner Carousel
+
+# 1 - Globalne
 lang: pl ## dp z,oamau ma to z API
 heading: Witaj świecie!
 footer:  Utowrzone 2015
 
-# Tłumaczenie dotyczące nazw plików generowanych przez i18n
+# 2 - Tłumaczenie dotyczące nazw plików generowanych przez i18n
 fileName:
     index: index
     cnc: cnc-tloczenia
     company: o-firmie
     contact: kontakt
 
-# Tłumaczenie dotyczące Navbar oraz Topbar
+# 3 - Tłumaczenie dotyczące Navbar oraz Topbar
 menu:
     homepage: Strona główna
     cnc: Tłoczenia cnc
@@ -22,7 +30,15 @@ menu:
         company: o-firmie
         contact: kontakt
 
-# Tłumaczenia dotyczące anchora do zmiany wersji językowej
+# 4 - Tłumaczenia dotyczące anchora do zmiany wersji językowej
 langSwitch:
     url: /en/
     label: English version
+
+# 5 - Tłumaczenie dotyczące Banner Carousel
+bannerCarousel:
+    itemFirst:
+        title: Posiadamy ponad 12 letnie doświadczenie w branży spedycyjnej
+        linkHref: transport-miedzynarodowy
+        linkTitle: Czytaj więcej o spedycji
+        dataThumb: Transport międzynarodowy

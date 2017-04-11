@@ -49,7 +49,6 @@ var vendorJSobject = {
 }
 
 //- Bootstrap plugins
-
 var bootstrapJsObject = {
 	bs: {
 		util: 'bs.util.js',
@@ -65,15 +64,6 @@ gulp.task('jade', function() {
     	pretty: true
 	}))
 	.pipe(gulp.dest('prod'));
-});
-
-gulp.task('jade-i18n', function() {
-	return gulp.src('dev/jade/en/*.jade')
-	.pipe(plumber())
-	.pipe(jade({
-    	pretty: true
-	}))
-	.pipe(gulp.dest('prod/en'));
 });
 
 //- Javascript vendor
@@ -124,17 +114,6 @@ gulp.task('js-plugins', function() {
 	.pipe(gulp.dest(protAssetsJSPath + 'plugins'))
 });
 
-//- Sass Bootstrap
-gulp.task('sass-bootstrap', function() {
-	return gulp.src(devSASSPath + 'bootstrap/bootstrap.scss')
-		.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(sass().on('error', sass.logError))
-		.pipe(concat('bootstrap.min.css'))
-		.pipe(sourcemaps.write('/'))
-		.pipe(gulp.dest(prodAssetsCSSPath))
-		.pipe(browserSync.stream());
-})
-
 //- Sass Site
 gulp.task('sass-site', function() {
 	return gulp.src(devSASSPath + 'site/style.scss')
@@ -161,7 +140,7 @@ gulp.task('sitemap', function() {
 });
 
 //- Gulp copy images from DEV to PROD
-gulp.task('copy', function() {
+gulp.task('copy-images', function() {
 	gulp.src(['dev/images/*.jpg', 'dev/images/*.png', 'dev/images/**/*.png', 'dev/images/**/*.jpg'])
 		.pipe(gulp.dest('prod/assets/images'))
 });
@@ -195,8 +174,7 @@ gulp.task('build:localize', function() {
 
 //- Gulp Watcher
 gulp.task('watch', function() {
-    gulp.watch('dev/jade/**/*.jade', ['jade']);
-	gulp.watch('dev/jade/en/*.jade', ['jade-i18n']);
+    gulp.watch('dev/jade/*.jade', ['jade']);
     gulp.watch('dev/sass/**/*.scss', ['sass-site']);
     gulp.watch('dev/sass/site/style.scss', ['sass-site']);
     gulp.watch('dev/js/vendor/*.js', ['js-vendor']);
@@ -204,7 +182,11 @@ gulp.task('watch', function() {
     gulp.watch('prod/**/*.html', browserSync.reload);
     gulp.watch('prod/assets/js/*.js', browserSync.reload);
 	gulp.watch('prod/assets/js/**/*.js', browserSync.reload);
+	gulp.watch('prod/**/*.html', ['build:localize']);
 });
+
+//- Zbudowanie wymaganej struktury do developmentu
+gulp.task('build-dev', ['jade', 'js-vendor', 'js-main', 'js-plugins', 'sass-site', 'copy-images', 'copy-fonts']);
 
 //- Gulp default
 gulp.task('default', [

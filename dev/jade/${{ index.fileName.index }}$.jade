@@ -1,8 +1,35 @@
 //- Document Head
 extends config/base
 block page_content
-    .container
-        .row
-            .col-xs-12
-                .jumbotron
-                    h1.display-3 Index
+    section.section.section--ghost
+        .component.banner-carousel.js-banner-carousel(data-component-name="Banner Carousel")
+            .item.banner-carousel__item(data-background="" + path_image + "banner-carousel/slider-01.jpg", data-background-mobile="" + path_image + "slider-01.jpg",, data-thumb="${{ index.bannerCarousel.itemFirst.dataThumb }}$")
+                .banner-carousel__inner
+                    .container
+                        .row
+                            .col-xs-12
+                                +banner-carousel__title(
+                                    '${{ index.bannerCarousel.itemFirst.title }}$',
+                                    '${{ index.menu.url.prefix }}$${{ index.bannerCarousel.itemFirst.linkHref }}$',
+                                    '${{ index.bannerCarousel.itemFirst.linkTitle }}$'
+                                )
+            .item.banner-carousel__item(data-background="" + path_image + "banner-carousel/slider-02.jpg", data-background-mobile="" + path_image + "slider-02.jpg", data-thumb="Magazyn czasowego składowania").main-slider__item.main-slider__item--overlayed
+                .banner-carousel__inner
+                    .container
+                        .row
+                            .col-xs-12
+                                +banner-carousel__title(
+                                    'Cechuje nas&nbsp;doskonała znajomość problematyki celnej',
+                                    'magazyn-czasowego-skladowania',
+                                    'Sprawdź, jak działa nasz magazyn'
+                                )
+            .item.banner-carousel__item(data-background="" + path_image + "banner-carousel/slider-03.jpg", data-background-mobile="" + path_image + "slider-03.jpg", data-thumb="Sprzedaż suchej tarcicy dąb-sosna").main-slider__item.main-slider__item--overlayed
+                .banner-carousel__inner
+                    .container
+                        .row
+                            .col-xs-12
+                                +banner-carousel__title(
+                                    'Tarcica pochodzi wyłącznie z&nbsp;własnego przetarcia na&nbsp;nowoczesnych trakach',
+                                    'sprzedaz-suchej-tarcicy-dab-sosna',
+                                    'Przeczytaj o naszej usłudze'
+                                )

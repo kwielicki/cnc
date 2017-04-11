@@ -1,0 +1,5 @@
+//- Mixiny dedykowane dla komponentu Banner Carousel
+mixin banner-carousel__title(title, btnHref, btnText)
+    .banner-carousel__content.animated(data-fx="fadeIn", data-time="20")
+        h2.banner-carousel__title!=title
+        a(href=btnHref).btn.btn-lg.btn-second!=btnText

@@ -206,11 +206,56 @@
                     var modeRewiteText = $this.attr('data-rewrite-mode');
                     $this.attr('href', modeRewiteText);
                     $this.attr('data-rewrite-mode', attrHref);
-                    
+
                 }
 
             });
         }
+
+        /* Skrypty wykorzystywane w projekcie :cnc:
+         * 1 - Banner Carousel
+         */
+
+        //- 1 - Banner Carousel
+        if ($('.js-banner-carousel').length) {
+            var $bannerCarousel = $('.js-banner-carousel');
+
+            $bannerCarousel.slick({
+                dots: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 7000,
+                pauseOnHover: true,
+                speed: 500,
+                customPaging : function(slider, i) {
+                    var thumb = $(slider.$slides[i]).data('thumb');
+                    return "<span style='background-image: url(" + $(slider.$slides[i]).data('background') + ")'>" + "<h6>" + thumb;
+                },
+            });
+            $bannerCarousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
+                console.log( $(this).attr('id') );
+                var $this = $(this);
+                $this.find(".item.slick-slide [data-fx]").each(function () {
+                    var $content = $(this);
+                    $content.removeClass($content.data('fx')).removeClass("activate");
+                });
+                setTimeout(function () {
+                    $this.find(".item.slick-active [data-fx]").each(function () {
+                        var $content = $(this);
+                        if ($content.data('time') != undefined) {
+                            setTimeout(function () {
+                                $content.addClass($content.data('fx')).addClass("activate");
+                            }, $content.data('time'));
+                        } else{
+                            $content.addClass($content.data('fx')).addClass("activate");
+                        }
+                    })
+                }, 150);
+            });
+
+        }
+
+
 	}); //- Document on ready [end]
 
 	$(window).on('load', function() {

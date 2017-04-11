@@ -25,3 +25,10 @@ menu:
 langSwitch:
     url: /pl/
     label: Polish version
+
+bannerCarousel:
+    itemFirst:
+        title: Posiadamy ponad 12 letnie doświadczenie w branży spedycyjnej [EN]
+        linkHref: cnc-turning
+        linkTitle: Czytaj więcej o spedycji [EN]
+        dataThumb: Transport międzynarodowy [en]
