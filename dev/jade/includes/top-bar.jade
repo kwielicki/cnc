@@ -17,7 +17,7 @@
                     li.top-nav__element
                         a(href="${{ index.menu.url.contact }}$", class="top-nav__anchor", title="${{ index.menu.contact }}$") ${{ index.menu.contact }}$
                     li.top-nav__element
-                        a(href="${{ index.langSwitch.url }}$", class="top-nav__anchor", title="${{ index.langSwitch.label }}$", data-rewrite-mode-disabled) ${{ index.langSwitch.label }}$
+                        block langFakeDetection
                     li.top-nav__element.top-nav__element--dropdown
                         a(href="#", class="top-nav__anchor top-nav__anchor--dropdown", title="Wydrukuj stronę, lub dodaj ją do ulubionych") 
                             | Narzędzia dodatkowe

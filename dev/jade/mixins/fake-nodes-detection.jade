@@ -1,0 +1,7 @@
+mixin fakeUrlDetection(setValidUrl, detectRootUrl)
+
+	if (detectRootUrl == 'isRoot')
+		a(href="${{ index.langSwitch.url }}$", class="top-nav__anchor", title="${{ index.langSwitch.label }}$", data-rewrite-mode-disabled) ${{ index.langSwitch.label }}$
+	else 
+		a(href="${{ index.langSwitch.url }}$" + setValidUrl, class="top-nav__anchor", title="${{ index.langSwitch.label }}$") ${{ index.langSwitch.label }}$
+	

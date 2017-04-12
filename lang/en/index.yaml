@@ -25,6 +25,11 @@ menu:
 langSwitch:
     url: /pl/
     label: Polish version
+    title: Przejdź do wersji serwisu w języku polskim
+    fakeUrl:
+        cnc: cnc-tloczenia
+        company: o-firmie
+        contact: kontakt`
 
 bannerCarousel:
     itemFirst:

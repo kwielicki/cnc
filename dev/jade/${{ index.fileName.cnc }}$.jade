@@ -1,4 +1,5 @@
 //- Document Head
 extends config/base
+block langFakeDetection
+	+fakeUrlDetection("${{ index.langSwitch.fakeUrl.cnc }}$")
 block page_content
-    

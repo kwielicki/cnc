@@ -1,8 +1,5 @@
 //- Document Head
 extends config/base
+block langFakeDetection
+	+fakeUrlDetection("${{ index.langSwitch.fakeUrl.contact }}$")
 block page_content
-    .container
-        .row
-            .col-xs-12
-                .jumbotron
-                    h1.display-3 Contact

@@ -1,5 +1,7 @@
 //- Document Head
 extends config/base
+block langFakeDetection
+	+fakeUrlDetection("", "isRoot")
 block page_content
     section.section.section--ghost
         .component.banner-carousel.js-banner-carousel(data-component-name="Banner Carousel")

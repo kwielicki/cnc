@@ -34,6 +34,11 @@ menu:
 langSwitch:
     url: /en/
     label: English version
+    title: Change site language to english version
+    fakeUrl:
+        cnc: cnc-turning
+        company: about-company
+        contact: contact
 
 # 5 - Tłumaczenie dotyczące Banner Carousel
 bannerCarousel:

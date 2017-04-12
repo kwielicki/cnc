@@ -200,7 +200,7 @@
                 var $this    = $(this),
                     attrHref = $this.attr('href');
 
-                if ($this.attr('data-rewrite-mode-disabled') === undefined) {
+                if (!$this.attr('data-rewrite-mode-disabled')) {
 
                     $this.attr('data-rewrite-mode', attrHref + ".html");
                     var modeRewiteText = $this.attr('data-rewrite-mode');
